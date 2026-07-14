@@ -7,38 +7,69 @@ HTML
     <meta charset="UTF-8">
     <title>Rescute 露恰露恰官方後援會 - 存檔區</title>
     <style>
+        /* 全域設定：冷色系背景與字體 */
         body {
-            background-color: #f4f4f4; /* 淡淡的灰白色，像舊紙張 */
-            color: #333;
-            font-family: sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            line-height: 1.6;
+            background-color: #eef2f5; /* 輕微的冷灰色調 */
+            color: #2c3e50; /* 深藍灰色文字 */
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
         }
+        
+        /* 網站容器：類似你提供的參考站風格 */
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 700px;
+            padding: 40px;
+            border: 1px solid #dcdde1;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db; /* 藍色裝飾線 */
+            padding-bottom: 10px;
+            font-size: 24px;
+        }
+
         .announcement {
-            border: 1px solid #ccc;
-            padding: 20px;
-            background-color: #fff;
+            margin-top: 20px;
         }
-        /* 這是在為未來的「崩壞」預留 CSS class */
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 隱藏區塊預留 */
         .hidden-truth {
-            display: none; 
+            margin-top: 50px;
+            text-align: center;
+            opacity: 0.3; /* 讓隱藏連結不那麼明顯 */
         }
     </style>
 </head>
 <body>
 
-    <div class="announcement">
+    <div class="container">
         <h1>【重要公告】關於露恰露恰的無限期暫停活動</h1>
-        <p>日期：2026年XX月XX日</p>
-        <p>致各位支持者：</p>
-        <p>由於近期突發狀況，經與營運團隊討論後，決定即日起暫時切斷所有網路連接，進入無限期休息狀態。感謝大家長久以來的支持。</p>
-        <p>——後援會會長</p>
-    </div>
+        <div class="announcement">
+            <p>日期：2026年XX月XX日</p>
+            <p>致各位支持者：</p>
+            <p>由於近期突發狀況，經與營運團隊討論後，決定即日起暫時切斷所有網路連接，進入無限期休息狀態。感謝大家長久以來的支持。</p>
+            <p>——後援會會長</p>
+        </div>
 
-    <!-- 這裡預留給未來的隱藏連結 -->
-    <div class="hidden-truth">
-        <a href="secret.html">傾聽裂痕</a>
+        <div class="hidden-truth">
+            <a href="secret.html">...聆聽裂痕...</a>
+        </div>
     </div>
 
 </body>
