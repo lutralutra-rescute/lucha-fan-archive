@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -13,10 +12,11 @@
             margin: 0;
             padding: 40px 20px;
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* 讓內容與隱藏連結垂直排列 */
+            align-items: center;    /* 水平置中 */
         }
         
-        /* 網站容器：類似你提供的參考站風格 */
+        /* 網站容器 */
         .container {
             background-color: #ffffff;
             width: 100%;
@@ -46,11 +46,21 @@
             text-decoration: underline;
         }
 
-        /* 隱藏區塊預留 */
+        /* 隱藏區塊設定：顏色與背景相同，實現隱形效果 */
         .hidden-truth {
-            margin-top: 50px;
+            margin-top: 30px;
             text-align: center;
-            opacity: 0.3; /* 讓隱藏連結不那麼明顯 */
+        }
+
+        .hidden-truth a {
+            color: #eef2f5; /* 隱藏關鍵：與背景色一致 */
+            font-size: 12px;
+            transition: color 0.3s;
+        }
+
+        /* 滑鼠經過時浮現 */
+        .hidden-truth a:hover {
+            color: #bdc3c7; 
         }
     </style>
 </head>
@@ -64,10 +74,11 @@
             <p>由於近期突發狀況，經與營運團隊討論後，決定即日起暫時切斷所有網路連接，進入無限期休息狀態。感謝大家長久以來的支持。</p>
             <p>——後援會會長</p>
         </div>
+    </div>
 
-        <div class="hidden-truth">
-            <a href="secret.html">...聆聽裂痕...</a>
-        </div>
+    <!-- 隱藏在背景中的連結 -->
+    <div class="hidden-truth">
+        <a href="secret.html">...聆聽裂痕...</a>
     </div>
 
 </body>
