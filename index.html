@@ -46,22 +46,20 @@
             text-decoration: underline;
         }
 
-        /* 隱藏區塊設定：顏色與背景相同，實現隱形效果 */
-        .hidden-truth {
-            margin-top: 30px;
-            text-align: center;
-        }
+<div class="hidden-truth">
+    <a href="javascript:void(0);" onclick="checkPassword()">...聆聽裂痕...</a>
+</div>
 
-        .hidden-truth a {
-            color: #eef2f5; /* 隱藏關鍵：與背景色一致 */
-            font-size: 12px;
-            transition: color 0.3s;
-        }
-
-        /* 滑鼠經過時浮現 */
-        .hidden-truth a:hover {
-            color: #bdc3c7; 
-        }
+<script>
+function checkPassword() {
+    let password = prompt("請輸入存取權限碼：");
+    if (password === "0607") { // 設定你的密碼
+        window.location.href = "logs.html?mode=glitch";
+    } else if (password !== null) {
+        alert("權限錯誤。");
+    }
+}
+</script>
     </style>
 </head>
 <body>
