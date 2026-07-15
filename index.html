@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <title>Lucha 露洽官方後援會 - 存檔區</title>
     <style>
-        /* 全域設定：冷色系背景與字體 */
+        /* CSS 區域 */
         body {
-            background-color: #eef2f5; /* 輕微的冷灰色調 */
-            color: #2c3e50; /* 深藍灰色文字 */
+            background-color: #eef2f5;
+            color: #2c3e50;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 40px 20px;
             display: flex;
-            flex-direction: column; /* 讓內容與隱藏連結垂直排列 */
-            align-items: center;    /* 水平置中 */
+            flex-direction: column;
+            align-items: center;
         }
-        
-        /* 網站容器 */
         .container {
             background-color: #ffffff;
             width: 100%;
@@ -25,41 +23,15 @@
             border: 1px solid #dcdde1;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-
-        h1 {
-            color: #34495e;
-            border-bottom: 2px solid #3498db; /* 藍色裝飾線 */
-            padding-bottom: 10px;
-            font-size: 24px;
-        }
-
-        .announcement {
-            margin-top: 20px;
-        }
-
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-<div class="hidden-truth">
-    <a href="javascript:void(0);" onclick="checkPassword()">...聆聽裂痕...</a>
-</div>
-
-<script>
-function checkPassword() {
-    let password = prompt("請輸入存取權限碼：");
-    if (password === "0607") { // 設定你的密碼
-        window.location.href = "logs.html?mode=glitch";
-    } else if (password !== null) {
-        alert("權限錯誤。");
-    }
-}
-</script>
+        h1 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 10px; font-size: 24px; }
+        .announcement { margin-top: 20px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        /* 隱藏連結樣式 */
+        .hidden-truth { margin-top: 30px; text-align: center; }
+        .hidden-truth a { color: #eef2f5; font-size: 12px; transition: color 0.3s; }
+        .hidden-truth a:hover { color: #bdc3c7; }
     </style>
 </head>
 <body>
@@ -71,8 +43,25 @@ function checkPassword() {
             <p>致各位支持者：</p>
             <p>由於近期突發狀況，經與營運團隊討論後，決定即日起暫時切斷所有網路連接，進入無限期休息狀態。感謝大家長久以來的支持。</p>
             <p>——後援會會長</p>
-
             <p style="text-align: right; font-size: 12px;">
-        <a href="logs.html">查看活動存檔紀錄</a>
-    </p>
-</div>
+                <a href="logs.html">查看活動存檔紀錄</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="hidden-truth">
+        <a href="javascript:void(0);" onclick="checkPassword()">...聆聽裂痕...</a>
+    </div>
+
+    <script>
+        function checkPassword() {
+            let password = prompt("請輸入存取權限碼：");
+            if (password === "0607") {
+                window.location.href = "logs.html?mode=glitch";
+            } else if (password !== null) {
+                alert("權限錯誤。");
+            }
+        }
+    </script>
+</body>
+</html>
